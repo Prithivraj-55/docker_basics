@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+RUN apt-get update -y && apt-get upgrade -y
+
+RUN mkdir /home/samp
+RUN touch /home/samp/prithiv
+RUN touch /home/samp/prithiv samplefolder2
+RUN mkdir /home/samp/samplefolder3
+
+ENV USER prithiv
+ENV SHELL /bin/bash
+ENV LOGNAME cerulesan-canv
+ENV SAMP sample
+
+CMD ["bash"]
